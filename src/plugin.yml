@@ -1,0 +1,17 @@
+main: fr.peaceandcube.pacpi.pAcPI
+name: pAcPI
+version: 1.0.0
+author: Yanis48
+api-version: 1.13
+
+commands:
+  removealltags:
+    description: Allows you to remove all tags from a player
+    permission: pacpi.removealltags
+    permission-message: §cYou do not have the permission to use this command.
+    usage: "§eUsage: §r/removealltags <player> [<except>]"
+
+permissions:
+  pacpi.removealltags:
+    description: Allows you to remove all tags from a player
+    default: op
