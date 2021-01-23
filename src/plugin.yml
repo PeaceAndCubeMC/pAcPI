@@ -1,7 +1,8 @@
 main: fr.peaceandcube.pacpi.pAcPI
 name: pAcPI
-version: 1.1.0
-author: Yanis48
+version: 1.2.0
+author: YanisBft
+website: https://github.com/PeaceAndCubeMC/pAcPI
 api-version: 1.13
 
 commands:

@@ -1,5 +1,6 @@
 package fr.peaceandcube.pacpi;
 
+import fr.peaceandcube.pacpi.event.PlayerEventHandler;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import fr.peaceandcube.pacpi.command.ChronoCommand;
@@ -11,5 +12,7 @@ public class pAcPI extends JavaPlugin {
 	public void onEnable() {
 		this.getCommand("removealltags").setExecutor(new RemoveAllTagsCommand());
 		this.getCommand("chrono").setExecutor(new ChronoCommand());
+
+		this.getServer().getPluginManager().registerEvents(new PlayerEventHandler(), this);
 	}
 }
