@@ -1,9 +1,9 @@
 main: fr.peaceandcube.pacpi.pAcPI
 name: pAcPI
-version: 1.2.0
+version: 1.2.1
 author: YanisBft
 website: https://github.com/PeaceAndCubeMC/pAcPI
-api-version: 1.13
+api-version: 1.17
 
 commands:
   removealltags:

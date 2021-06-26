@@ -16,3 +16,6 @@ Various useful commands
 ### Player
 - ``PlayerErrors`` provides generic error messages.
 - ``PlayerSuggestionProviders`` provides generic lists of strings, used by command tab completion.
+
+### Gameplay
+- When a player places an item frame or a glow item frame renamed "invisible", the item frame entity gets the ``Invisible`` tag.
