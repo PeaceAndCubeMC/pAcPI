@@ -3,8 +3,8 @@ package fr.peaceandcube.pacpi.command;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.peaceandcube.pacpi.player.PlayerMessages;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -29,16 +29,16 @@ public class ChronoCommand implements CommandExecutor, TabExecutor {
 				case "start":
 					Chrono chrono = new Chrono(player);
 					chrono.start();
-					sender.sendMessage("Un chrono a été démarré pour " + args[1] + ".");
+					sender.sendMessage(String.format(PlayerMessages.CHRONO_STARTED, args[1]));
 					return true;
 				case "end":
 					Chrono c = Chrono.PLAYER_CHRONOS.get(player);
 					if (c != null) {
 						c.end();
-						player.sendMessage(ChatColor.YELLOW + "Tu as fait un temps de " + c.getTime() + " !");
+						player.sendMessage(String.format(PlayerMessages.CHRONO_ENDED, c.getTime()));
 						c.remove(player);
 					} else {
-						sender.sendMessage(ChatColor.RED + args[1] + " n'a pas de chrono démarré.");
+						sender.sendMessage(String.format(PlayerMessages.CHRONO_NOT_STARTED, args[1]));
 					}
 					return true;
 				}

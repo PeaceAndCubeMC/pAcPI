@@ -3,6 +3,7 @@ package fr.peaceandcube.pacpi.command;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.peaceandcube.pacpi.player.PlayerMessages;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -10,7 +11,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 
-import fr.peaceandcube.pacpi.player.PlayerErrors;
 import fr.peaceandcube.pacpi.player.PlayerSuggestionProviders;
 
 public class RemoveAllTagsCommand implements CommandExecutor, TabExecutor {
@@ -28,13 +28,13 @@ public class RemoveAllTagsCommand implements CommandExecutor, TabExecutor {
 								player.removeScoreboardTag(tag);
 							}
 						});
-						sender.sendMessage("Tous les tags sauf " + args[1] + " ont été supprimés.");
+						sender.sendMessage(String.format(PlayerMessages.REMOVE_ALL_TAGS_EXCEPT, args[1]));
 					} else {
 						PlayerSuggestionProviders.getAllTags().forEach(tag -> player.removeScoreboardTag(tag));
-						sender.sendMessage("Tous les tags ont été supprimés.");
+						sender.sendMessage(PlayerMessages.REMOVE_ALL_TAGS);
 					}
 				} else {
-					sender.sendMessage(PlayerErrors.PLAYER_NOT_FOUND);
+					sender.sendMessage(PlayerMessages.PLAYER_NOT_FOUND);
 				}
 				return true;
 			}

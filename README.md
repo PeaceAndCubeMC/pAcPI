@@ -14,7 +14,7 @@ Various useful commands
 - ``LocalizedMonth`` provides month number, localized month name and maximum days.
 
 ### Player
-- ``PlayerErrors`` provides generic error messages.
+- ``PlayerMessages`` provides feedback messages.
 - ``PlayerSuggestionProviders`` provides generic lists of strings, used by command tab completion.
 
 ### Gameplay
