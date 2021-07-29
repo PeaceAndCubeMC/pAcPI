@@ -16,6 +16,10 @@ public class PlayerMessages {
     public static final String CHRONO_ENDED = info("Tu as fait un temps de %s !");
     public static final String CHRONO_NOT_STARTED = error("%s n'a pas de chrono démarré.");
 
+    // resourcepack command
+    public static final String PACK_URL_INVALID = error("L'adresse du pack de ressources est invalide.");
+    public static final String PACK_SENT = info("Un pack de ressources va être téléchargé !");
+
     public static String error(String msg) {
         return ChatColor.RED + msg;
     }

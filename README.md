@@ -7,6 +7,7 @@ An API to help creating plugins for PeaceAndCube
 Various useful commands
 - ``/removealltags <target> [<except>]`` to remove all scoreboard tags from the target. The tag specified in ``except`` will be ignored.
 - ``/chrono (start|end) <target>`` to start or end a player timer.
+- ``/resourcepack send <target> <url>`` to send a resource pack to a target.
 
 ### Date
 - ``Chrono`` provides a player-specific timer that can be started and ended.
