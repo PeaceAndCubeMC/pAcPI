@@ -1,6 +1,8 @@
 # pAcPI
 An API to help creating plugins for PeaceAndCube
 
+> **This repository is now read-only, as it is no longer maintained or used by PeaceAndCube plugins.**
+
 ## Features
 
 ### Command
